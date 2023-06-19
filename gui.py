@@ -79,14 +79,13 @@ class Interface(ttk.Notebook):
 
     def set_controller(self, controller):
         """
-        For setting the controller
-        :param controller:
+        set controller
         """
         self.controller = controller
 
     def clicked_show_airports(self):
         """
-        When the 'Show Airports' button was clicked
+        airports show
         """
         if self.controller:
             self.controller.get_airports(self.lat_min_entry.get(),
@@ -97,7 +96,7 @@ class Interface(ttk.Notebook):
 
     def clicked_clear_form(self):
         """
-        For clearing form
+        clear form
         """
         self.tree.delete(*self.tree.get_children())
         self.lat_min_entry.delete(0, END)
@@ -111,7 +110,7 @@ class Interface(ttk.Notebook):
 
     def show_airports(self, airports):
         """
-        For showing the table of airports
+        the table of airports
         """
         self.tree.delete(*self.tree.get_children())
         for airport in airports:
